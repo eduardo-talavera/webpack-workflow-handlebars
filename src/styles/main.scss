@@ -1,0 +1,41 @@
+@import 'variables';
+
+body{
+    background: $iceBlue;
+
+    h1,
+    h2{
+        color: aliceblue;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    img{
+        width: 30rem;
+    }
+    header{
+        width: 100%;
+        background: $black;
+        display: flex;
+        justify-content: space-around;
+        margin: 0;
+        nav{
+            ul{
+                list-style: none;
+                li{
+                    display: inline-block;
+                    margin: 1rem;
+                    a{
+                        color: $white;
+                        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+
+
+
