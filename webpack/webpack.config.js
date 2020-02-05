@@ -4,13 +4,30 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 
 module.exports = {
-    entry: './src/app.js',
+    entry: './src/js/app.js',
     output: {
         path: path.resolve(__dirname,'../dist'),
         filename: 'js/bundle.js'
     },
+    devServer: {
+        // contentBase: path.resolve(__dirname,'../dist'),
+        port: 3000,
+        // open: 'firefox',
+        open: 'Chrome',
+        // watchContentBase:true
+    },
     module: {
         rules: [
+            {
+                //js
+                test: /\.m?js$/,   //busca todods los archivos js
+                use : {
+                    loader: 'babel-loader',
+                    options:{
+                        presets:['@babel/preset-env']
+                    }
+                }
+            },
             {
                 test: /\.(sa|sc|c)ss$/,
                 use: [
