@@ -1,42 +1,20 @@
+@import './plugins/cookiecuttr';
+
 @import 'variables';
-@import 'pages/home';
+@import 'fonts';
 
-body{
-    background: $iceBlue;
+@import "~bootstrap/scss/bootstrap";
 
-    h1,
-    h2{
-        color: aliceblue;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
 
-    img{
-        width: 30rem;
-    }
-    header{
-        width: 100%;
-        background: $black;
-        display: flex;
-        justify-content: space-around;
-        margin: 0;
-        nav{
-            ul{
-                list-style: none;
-                li{
-                    display: inline-block;
-                    margin: 1rem;
-                    a{
-                        color: $white;
-                        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-                        text-decoration: none;
-                    }
-                }
-            }
-        }
-    }
+.row {
+    background: #efefef;
+    .col-3{
+        background: green;
+    }  
 
+    margin: 10rem 0;  
+    padding: 7rem 0;
 }
-
 
 
 

@@ -29,6 +29,16 @@ module.exports = {
                 }
             },
             {
+                test: require.resolve('jquery'), // para cargar jquery en todos los modulos que lo requieran
+                use: [{
+                    loader: 'expose-loader',
+                    options: 'jQuery'
+                 },{
+                    loader: 'expose-loader',
+                    options: '$'
+                 }]
+            },   
+            {
                 test: /\.(sa|sc|c)ss$/,
                 use: [
                     MiniCssExtractPlugin.loader,
